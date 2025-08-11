@@ -4,6 +4,8 @@ require "rails/test_help"
 
 module ActiveSupport
   class TestCase
+    include FactoryBot::Syntax::Methods
+
     # Run tests in parallel with specified workers
     parallelize(workers: :number_of_processors)
 
@@ -11,5 +13,15 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
+    def sign_in(user)
+      post "/session", params: {
+        email_address: user.email_address,
+        password: user.password
+      }
+    end
+
+    def sign_in_as(user)
+      session[:user_id] = user.id if respond_to?(:session)
+    end
   end
 end
