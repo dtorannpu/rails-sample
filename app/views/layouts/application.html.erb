@@ -23,6 +23,12 @@
   </head>
 
   <body>
+    <% if authenticated? %>
+      <header>
+        <%= button_to "Sign out", session_path, method: :delete %>
+      </header>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
