@@ -6,7 +6,7 @@ workflows:
     '.github/workflows/ci.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/upload-artifact@v7.0.2'
-        - 'ruby/setup-ruby@v1.338.0'
+        - 'ruby/setup-ruby@v1.342.0'
 dependencies:
     'actions/checkout@v7.0.1':
         ref: 'v7.0.1'
@@ -18,8 +18,8 @@ dependencies:
         commit: 'sha1-cf430e030ddbb5b0abf93d22962f4752f3646cd9'
         owner_id: 44036562
         repo_id: 192625955
-    'ruby/setup-ruby@v1.338.0':
-        ref: 'v1.338.0'
-        commit: 'sha1-b3aaceaef7e0ee231b499e7b5f49c03fc1d32199'
+    'ruby/setup-ruby@v1.342.0':
+        ref: 'v1.342.0'
+        commit: 'sha1-f9c4492e86def3e644ab32a0ef185eda5b0c20d0'
         owner_id: 210414
         repo_id: 231208785
